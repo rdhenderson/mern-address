@@ -7,11 +7,12 @@ var mongoose = require("mongoose");
 // Require Click schema
 var Search = require("./models/search");
 
-// Require Routes
-require("./controllers/routes.js")(app);
 
 // Create a new express app
 var app = express();
+
+// Require Routes
+require("./controllers/routes.js")(app);
 
 // Sets an initial port. We'll use this later in our listener
 var PORT = process.env.PORT || 3000;
