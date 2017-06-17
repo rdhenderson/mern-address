@@ -4,6 +4,7 @@ var React = require("react");
 // Here we include all of the sub-components
 var Form = require("./children/Form");
 var Results = require("./children/Results");
+var Search = require("./children/Search");
 
 // Helper Function
 var helpers = require("./utils/helpers.js");
@@ -13,7 +14,10 @@ var Main = React.createClass({
 
   // Here we set a generic state associated with the number of clicks
   getInitialState: function() {
-    return { searchTerm: "", results: "" };
+    return {
+      searchTerm: "",
+      results: ""
+    };
   },
 
   // If the component updates we'll run this code
@@ -63,6 +67,16 @@ var Main = React.createClass({
           <div className="col-md-6">
 
             <Results address={this.state.results} />
+
+          </div>
+
+        </div>
+
+        <div className="row">
+
+          <div className="col-md-12">
+
+            <Search search="hello" results="attribute" />
 
           </div>
 
