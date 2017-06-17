@@ -10,6 +10,10 @@ var SearchSchema = new Schema({
   },
   results: {
     type: String
+  },
+  created_Date: {
+    type: Date,
+    default: Date.now
   }
 });
 
