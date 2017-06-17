@@ -20,6 +20,12 @@ var helpers = {
       return response.data.results[0].formatted;
     });
 
+  },
+  getSearches : function () {
+    return axios.get("/api/search");
+  },
+  saveSearch: function (searchData) {
+    return axios.post("/api/search", searchData);
   }
 
 };
